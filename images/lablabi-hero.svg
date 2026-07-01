@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#FDF8F0"/>
+  <circle cx="400" cy="220" r="120" fill="#E8C547" opacity="0.8"/>
+  <circle cx="350" cy="200" r="40" fill="#CE1126" opacity="0.6"/>
+  <circle cx="450" cy="240" r="30" fill="#006233" opacity="0.5"/>
+  <text x="400" y="420" text-anchor="middle" font-family="Arial" font-size="28" fill="#8B7355">لبلابي تونسي — lablabi-hero.webp</text>
+</svg>
