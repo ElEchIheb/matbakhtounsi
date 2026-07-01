@@ -363,7 +363,7 @@ h3 { font-size: clamp(1.1rem, 3vw, 1.4rem); }
   align-items: center;
   background:
     linear-gradient(135deg, rgba(206, 17, 38, 0.85) 0%, rgba(0, 98, 51, 0.75) 100%),
-    url('https://images.unsplash.com/photo-1579113800038-c38b57bc32f3?w=1920&q=80&auto=format&fit=crop') center/cover no-repeat;
+    url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Souk_El_Attarine%2C_Tunis.jpg/1280px-Souk_El_Attarine%2C_Tunis.jpg') center/cover no-repeat;
   color: var(--white);
   text-align: center;
   padding: 3rem 1rem;
@@ -1453,4 +1453,131 @@ section:nth-child(even) {
 .back-to-top:hover {
   background: var(--green);
   transform: translateY(-3px);
+}
+
+/* ── Ad fallback ── */
+.ad-fallback {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  background: linear-gradient(135deg, var(--cream), var(--white));
+  border-radius: var(--radius-sm);
+  color: var(--dark);
+  transition: var(--transition);
+}
+
+.ad-fallback:hover {
+  background: linear-gradient(135deg, var(--red), var(--green));
+  color: var(--white);
+}
+
+.ad-placeholder {
+  font-size: 0.75rem;
+  color: var(--gray);
+}
+
+/* ── 404 Page ── */
+.error-hero {
+  background: linear-gradient(135deg, var(--red), var(--green));
+  color: var(--white);
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.error-code {
+  font-size: 5rem;
+  font-weight: 800;
+  opacity: 0.4;
+  display: block;
+}
+
+.error-suggestions {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.error-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.error-links a {
+  display: block;
+  padding: 0.75rem 1rem;
+  background: var(--white);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow);
+}
+
+.page-content {
+  padding: 2rem 0 3rem;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-top: 0.35rem;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--gray-light);
+  border-radius: var(--radius-sm);
+  font-family: var(--font);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--red);
+}
+
+.related-link {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.related-emoji {
+  font-size: 1.5rem;
+}
+
+.video-title {
+  margin-bottom: 1rem;
+  color: var(--green);
+}
+
+.video-fallback {
+  text-align: center;
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.video-fallback a {
+  color: var(--red);
+  font-weight: 600;
+}
+
+.diff-easy { color: var(--green); }
+.diff-medium { color: var(--gold); }
+.diff-hard { color: var(--red); }
+
+.tool-static {
+  cursor: default;
+}
+
+.tool-note {
+  font-size: 0.8rem;
+  color: var(--gray);
+  margin-top: 0.5rem;
+}
+
+.blog-article h2 {
+  font-size: 1.1rem;
 }

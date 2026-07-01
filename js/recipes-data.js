@@ -1,4 +1,4 @@
-/* Auto-generated from data/recipes.json */
+/* Auto-generated */
 window.RECIPES = [
   {
     "slug": "lablabi-tounsi",
@@ -9,7 +9,7 @@ window.RECIPES = [
     "totalTime": "20",
     "yield": "4",
     "difficulty": "سهلة",
-    "image": "https://images.unsplash.com/photo-1512058567297-8c084a1a8932?w=800&q=80&auto=format&fit=crop",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Chickpea_and_Pasta_Soup_%28Laabali%29.jpg/800px-Chickpea_and_Pasta_Soup_%28Laabali%29.jpg",
     "imageAlt": "طبق لبلابي تونسي — حمص وهريسة وخبز مقرمش",
     "featured": true
   },
@@ -22,7 +22,7 @@ window.RECIPES = [
     "totalTime": "30",
     "yield": "4",
     "difficulty": "متوسطة",
-    "image": "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=800&q=80&auto=format&fit=crop",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Brik.jpg/800px-Brik.jpg",
     "imageAlt": "بريك تونسي مقلي ذهبي محشي بالتونة",
     "featured": true
   },
@@ -35,7 +35,7 @@ window.RECIPES = [
     "totalTime": "30",
     "yield": "6",
     "difficulty": "متوسطة",
-    "image": "https://images.pexels.com/photos/6605200/pexels-photo-6605200.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "image": "https://images.pexels.com/photos/725991/pexels-photo-725991.jpeg?auto=compress&cs=tinysrgb&w=800",
     "imageAlt": "فريكاسي تونسي ساندويتش مقلي",
     "featured": true
   },
@@ -48,7 +48,7 @@ window.RECIPES = [
     "totalTime": "30",
     "yield": "4",
     "difficulty": "سهلة",
-    "image": "https://images.unsplash.com/photo-1645112411341-6c4fd023314a?w=800&q=80&auto=format&fit=crop",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Shakshuka.jpg/800px-Shakshuka.jpg",
     "imageAlt": "شكشوكة تونسية بالبيض والطماطم",
     "featured": false
   },
@@ -61,7 +61,7 @@ window.RECIPES = [
     "totalTime": "50",
     "yield": "30",
     "difficulty": "متوسطة",
-    "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&q=80&auto=format&fit=crop",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Baklava%2C_Tunisian_style.jpg/800px-Baklava%2C_Tunisian_style.jpg",
     "imageAlt": "يويو تونسي حلوة مقرمشة",
     "featured": false
   },
@@ -74,7 +74,7 @@ window.RECIPES = [
     "totalTime": "35",
     "yield": "4",
     "difficulty": "سهلة",
-    "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=800&q=80&auto=format&fit=crop",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Mecheouia_Salad.jpg/800px-Mecheouia_Salad.jpg",
     "imageAlt": "سلطة مشوية تونسية ملونة",
     "featured": false
   },
@@ -87,7 +87,7 @@ window.RECIPES = [
     "totalTime": "70",
     "yield": "25",
     "difficulty": "صعبة",
-    "image": "https://images.unsplash.com/photo-1599599810769-bcde5a160d32?w=800&q=80&auto=format&fit=crop",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Makroudh.jpg/800px-Makroudh.jpg",
     "imageAlt": "مقروض تونسي بالتمر",
     "featured": true
   },
@@ -100,7 +100,7 @@ window.RECIPES = [
     "totalTime": "75",
     "yield": "4",
     "difficulty": "متوسطة",
-    "image": "https://images.unsplash.com/photo-1604909052743-94e838986c24?w=800&q=80&auto=format&fit=crop",
+    "image": "https://images.pexels.com/photos/566566/pexels-photo-566566.jpeg?auto=compress&cs=tinysrgb&w=800",
     "imageAlt": "بامية خضراء باللحم في صلصة طماطم",
     "featured": false
   },
@@ -113,7 +113,7 @@ window.RECIPES = [
     "totalTime": "90",
     "yield": "6",
     "difficulty": "متوسطة",
-    "image": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b779?w=800&q=80&auto=format&fit=crop",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Couscous-2.jpg/800px-Couscous-2.jpg",
     "imageAlt": "كسكسي بالحوت والخضرة",
     "featured": true
   },
@@ -126,7 +126,7 @@ window.RECIPES = [
     "totalTime": "120",
     "yield": "6",
     "difficulty": "متوسطة",
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&q=80&auto=format&fit=crop",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Couscous-2.jpg/800px-Couscous-2.jpg",
     "imageAlt": "كسكسي تونسي بالدجاج والخضرة",
     "featured": true
   }

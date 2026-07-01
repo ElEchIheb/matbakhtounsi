@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://matbakhtounsi.tn/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://matbakhtounsi.tn/wasfat/</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://matbakhtounsi.tn/wasfat/lablabi-tounsi.html</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://matbakhtounsi.tn/wasfat/brik-tounsi.html</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://matbakhtounsi.tn/wasfat/fricasse-tounsi.html</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://matbakhtounsi.tn/wasfat/chakchouka-tounsia.html</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://matbakhtounsi.tn/wasfat/youyou-tounsi.html</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://matbakhtounsi.tn/wasfat/salade-mechouia.html</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://matbakhtounsi.tn/wasfat/makroud-tounsi.html</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://matbakhtounsi.tn/wasfat/bamia-billahm.html</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://matbakhtounsi.tn/wasfat/kosksi-hout.html</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://matbakhtounsi.tn/wasfat/kosksi-djaj.html</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://matbakhtounsi.tn/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://matbakhtounsi.tn/wasfat/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://matbakhtounsi.tn/blog/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://matbakhtounsi.tn/adawat/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://matbakhtounsi.tn/men-matbakhekum/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://matbakhtounsi.tn/aanna/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://matbakhtounsi.tn/ittasil-bina/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://matbakhtounsi.tn/privacy/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://matbakhtounsi.tn/wasfat/lablabi-tounsi.html</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://matbakhtounsi.tn/wasfat/brik-tounsi.html</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://matbakhtounsi.tn/wasfat/fricasse-tounsi.html</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://matbakhtounsi.tn/wasfat/chakchouka-tounsia.html</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://matbakhtounsi.tn/wasfat/youyou-tounsi.html</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://matbakhtounsi.tn/wasfat/salade-mechouia.html</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://matbakhtounsi.tn/wasfat/makroud-tounsi.html</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://matbakhtounsi.tn/wasfat/bamia-billahm.html</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://matbakhtounsi.tn/wasfat/kosksi-hout.html</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://matbakhtounsi.tn/wasfat/kosksi-djaj.html</loc><changefreq>weekly</changefreq></url>
 </urlset>

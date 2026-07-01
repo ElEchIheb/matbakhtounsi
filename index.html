@@ -1,258 +1,181 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" data-depth="0">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="مطبخنا التونسي — أحلى وصفات تونسية بالدارجة. لبلابي، كسكسي، بريك، فريكاسي، حلويات وأكل شارع. وصفات يومية أصيلة من تونس لكل المغرب العربي والمهجر.">
-  <meta name="keywords" content="وصفات تونسية, مطبخ تونسي, لبلابي, كسكسي, بريك, فريكاسي, حلويات تونسية, أكل شارع, رمضان">
+  <meta name="description" content="مطبخنا التونسي — أحلى وصفات تونسية بالدارجة. لبلابي، كسكسي، بريك، فريكاسي، حلويات وأكل شارع.">
+  <meta name="keywords" content="وصفات تونسية, مطبخ تونسي, لبلابي, كسكسي, بريك">
   <meta name="author" content="مطبخنا التونسي">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://matbakhtounsi.tn/">
-  <meta name="monetag" content="f7939f2ac930f8845a2734314444e577">
   <meta property="og:type" content="website">
   <meta property="og:title" content="مطبخنا التونسي — Wasfat Tounsia">
   <meta property="og:description" content="أحلى وصفات تونسية بالدارجة — من مطبخنا لبيتكم">
   <meta property="og:url" content="https://matbakhtounsi.tn/">
-  <meta property="og:locale" content="ar_TN">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=80&auto=format&fit=crop">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="مطبخنا التونسي — Wasfat Tounsia">
-  <meta name="twitter:image" content="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=80&auto=format&fit=crop">
+  <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Couscous-2.jpg/800px-Couscous-2.jpg">
   <title>مطبخنا التونسي — Wasfat Tounsia | وصفات تونسية بالدارجة</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍲</text></svg>">
+  <script src="https://quge5.com/88/tag.min.js" data-zone="255314" async data-cfasync="false"></script>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "مطبخنا التونسي",
-    "alternateName": "Wasfat Tounsia",
-    "url": "https://matbakhtounsi.tn",
-    "description": "وصفات تونسية أصيلة بالدارجة التونسية",
-    "inLanguage": "ar-TN",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://matbakhtounsi.tn/wasfat/?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  }
+  {"@context":"https://schema.org","@type":"WebSite","name":"مطبخنا التونسي","url":"https://matbakhtounsi.tn","inLanguage":"ar-TN"}
   </script>
 </head>
 <body>
-
   <header class="site-header">
     <div class="container header-inner">
-      <a href="/" class="logo" aria-label="مطبخنا التونسي — الصفحة الرئيسية">
-        <div class="logo-icon" aria-hidden="true">🍲</div>
-        <div class="logo-text">
-          <strong>مطبخنا التونسي</strong>
-          <small>Wasfat Tounsia</small>
-        </div>
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🍲</div>
+        <div class="logo-text"><strong>مطبخنا التونسي</strong><small>Wasfat Tounsia</small></div>
       </a>
       <div class="search-box">
-        <label for="site-search" class="sr-only">قلّب على وصفة</label>
-        <input type="search" id="site-search" placeholder="قلّب على وصفة... (لبلابي، كسكسي...)" autocomplete="off">
+        <label for="site-search" class="sr-only">بحث</label>
+        <input type="search" id="site-search" placeholder="قلّب على وصفة..." autocomplete="off">
         <button type="button" aria-label="بحث">🔍</button>
         <div class="search-results" id="search-results" hidden></div>
       </div>
-      <button class="theme-toggle" aria-label="الوضع الليلي" title="الوضع الليلي">🌙</button>
-      <button class="nav-toggle" aria-label="فتح القائمة" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="main-nav" aria-label="القائمة الرئيسية">
+      <button class="theme-toggle" aria-label="الوضع الليلي">🌙</button>
+      <button class="nav-toggle" aria-label="القائمة" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="main-nav">
         <ul>
-          <li><a href="/" class="active">الرئيسية</a></li>
-          <li><a href="wasfat/">الوصفات</a></li>
-          <li><a href="men-matbakhekum/">من مطبخكم</a></li>
-          <li><a href="blog/">المدونة</a></li>
-          <li><a href="adawat/">أدوات</a></li>
-          <li><a href="aanna/">عنّا</a></li>
-          <li><a href="ittasil-bina/">اتصل بنا</a></li>
+          <li><a href="index.html" class="active">الرئيسية</a></li>
+          <li><a href="wasfat/index.html">الوصفات</a></li>
+          <li><a href="men-matbakhekum/index.html">من مطبخكم</a></li>
+          <li><a href="blog/index.html">المدونة</a></li>
+          <li><a href="adawat/index.html">أدوات</a></li>
+          <li><a href="aanna/index.html">عنّا</a></li>
+          <li><a href="ittasil-bina/index.html">اتصل بنا</a></li>
         </ul>
       </nav>
     </div>
     <div class="container">
-      <div class="ad-slot ad-header" id="monetag-header-banner" data-ad-type="banner" data-size="728x90" role="complementary" aria-label="إعلان"></div>
+      <div class="ad-slot ad-header" data-ad-type="banner" data-size="728x90" data-fallback="header"></div>
     </div>
   </header>
 
   <main>
-    <section class="hero" aria-label="قسم الترحيب">
+    <section class="hero">
       <div class="hero-content">
         <span class="hero-badge">🇹🇳 أكل تونسي أصيل</span>
         <h1>أحلى وصفات تونسية بالدارجة — من مطبخنا لبيتكم</h1>
-        <p>وصفات يومية، أكل شارع، حلويات، رمضان وعيد — كل شي بالدارجة التونسية 100%</p>
+        <p>لبلابي، كسكسي، بريك، حلويات — كل شي بالدارجة 100%</p>
         <div class="hero-actions">
-          <a href="wasfat/" class="btn btn-primary">اكتشف الوصفات 🍽️</a>
+          <a href="wasfat/index.html" class="btn btn-primary">اكتشف الوصفات 🍽️</a>
           <a href="wasfat/lablabi-tounsi.html" class="hero-today">أكل اليوم: لبلابي 🥙</a>
         </div>
       </div>
     </section>
 
-    <section id="akl-lyoum" aria-labelledby="today-title">
+    <section id="akl-lyoum">
       <div class="container">
-        <h2 class="section-title" id="today-title">🍽️ <span>أكل اليوم</span></h2>
+        <h2 class="section-title">🍽️ <span>أكل اليوم</span></h2>
         <article class="recipe-today-card">
-          <img class="recipe-today-img"
-            src="https://images.unsplash.com/photo-1512058567297-8c084a1a8932?w=600&q=80&auto=format&fit=crop"
-            alt="لبلابي تونسي أصلي — حمص وهريسة وخبز مقرمش" width="600" height="400" loading="eager">
+          <img class="recipe-today-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Chickpea_and_Pasta_Soup_%28Laabali%29.jpg/600px-Chickpea_and_Pasta_Soup_%28Laabali%29.jpg" alt="لبلابي تونسي" loading="eager">
           <div class="recipe-today-body">
             <span class="card-category">أكل شارع</span>
             <h3>لبلابي تونسي أصلي</h3>
             <div class="recipe-meta">
               <span class="meta-tag">⏱ 20 دقيقة</span>
-              <span class="meta-tag">👥 4 أشخاص</span>
+              <span class="meta-tag">👥 4</span>
               <span class="meta-tag difficulty-easy">⭐ سهلة</span>
             </div>
-            <p>اللبلابي متاع الصباح في تونس — حارّ، مقرمش، وبالهريسة على قلبك. وصفة سهلة وبنينة!</p>
-            <a href="wasfat/lablabi-tounsi.html" class="btn btn-primary">شوف الوصفة كاملة ←</a>
+            <p>حارّ، مقرمش، وبالهريسة على قلبك!</p>
+            <a href="wasfat/lablabi-tounsi.html" class="btn btn-primary">شوف الوصفة ←</a>
           </div>
         </article>
       </div>
     </section>
 
-    <section id="jadwal" aria-labelledby="week-title">
+    <section id="jadwal">
       <div class="container">
-        <h2 class="section-title" id="week-title">📅 <span>جدول الأسبوع</span></h2>
-        <p class="text-center mb-1" style="color:var(--gray)">برنامج أكل الأسبوع — اختار واطبخ!</p>
+        <h2 class="section-title">📅 <span>جدول الأسبوع</span></h2>
         <div class="weekly-grid">
-          <a href="wasfat/kosksi-djaj.html" class="day-card" data-day="الإثنين">
-            <div class="day-emoji">🍚</div><div class="day-name">الإثنين</div><div class="day-recipe">كسكسي</div>
-          </a>
-          <a href="wasfat/chakchouka-tounsia.html" class="day-card" data-day="الثلاثاء">
-            <div class="day-emoji">🍳</div><div class="day-name">الثلاثاء</div><div class="day-recipe">شكشوكة</div>
-          </a>
-          <a href="wasfat/bamia-billahm.html" class="day-card" data-day="الأربعاء">
-            <div class="day-emoji">🫛</div><div class="day-name">الأربعاء</div><div class="day-recipe">بامية</div>
-          </a>
-          <a href="wasfat/brik-tounsi.html" class="day-card" data-day="الخميس">
-            <div class="day-emoji">🥟</div><div class="day-name">الخميس</div><div class="day-recipe">بريك</div>
-          </a>
-          <a href="wasfat/kosksi-hout.html" class="day-card" data-day="الجمعة">
-            <div class="day-emoji">🐟</div><div class="day-name">الجمعة</div><div class="day-recipe">كسكسي حوت</div>
-          </a>
-          <a href="wasfat/lablabi-tounsi.html" class="day-card" data-day="السبت">
-            <div class="day-emoji">🥙</div><div class="day-name">السبت</div><div class="day-recipe">لبلابي</div>
-          </a>
-          <a href="wasfat/makroud-tounsi.html" class="day-card" data-day="الأحد">
-            <div class="day-emoji">🍯</div><div class="day-name">الأحد</div><div class="day-recipe">مقروض</div>
-          </a>
+          <a href="wasfat/kosksi-djaj.html" class="day-card" data-day="الإثنين"><div class="day-emoji">🍚</div><div class="day-name">الإثنين</div><div class="day-recipe">كسكسي</div></a>
+          <a href="wasfat/chakchouka-tounsia.html" class="day-card" data-day="الثلاثاء"><div class="day-emoji">🍳</div><div class="day-name">الثلاثاء</div><div class="day-recipe">شكشوكة</div></a>
+          <a href="wasfat/bamia-billahm.html" class="day-card" data-day="الأربعاء"><div class="day-emoji">🫛</div><div class="day-name">الأربعاء</div><div class="day-recipe">بامية</div></a>
+          <a href="wasfat/brik-tounsi.html" class="day-card" data-day="الخميس"><div class="day-emoji">🥟</div><div class="day-name">الخميس</div><div class="day-recipe">بريك</div></a>
+          <a href="wasfat/kosksi-hout.html" class="day-card" data-day="الجمعة"><div class="day-emoji">🐟</div><div class="day-name">الجمعة</div><div class="day-recipe">كسكسي حوت</div></a>
+          <a href="wasfat/lablabi-tounsi.html" class="day-card" data-day="السبت"><div class="day-emoji">🥙</div><div class="day-name">السبت</div><div class="day-recipe">لبلابي</div></a>
+          <a href="wasfat/makroud-tounsi.html" class="day-card" data-day="الأحد"><div class="day-emoji">🍯</div><div class="day-name">الأحد</div><div class="day-recipe">مقروض</div></a>
         </div>
       </div>
     </section>
 
-    <section id="mumayaza" aria-labelledby="featured-title">
+    <section id="mumayaza">
       <div class="container">
-        <h2 class="section-title" id="featured-title">⭐ <span>وصفات مميزة</span></h2>
+        <h2 class="section-title">⭐ <span>وصفات مميزة</span></h2>
         <div class="recipes-grid">
           <a href="wasfat/kosksi-djaj.html" class="recipe-card">
-            <img class="recipe-card-img" src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&q=80&auto=format&fit=crop" alt="كسكسي بالدجاج" width="300" height="200" loading="lazy">
-            <div class="recipe-card-body"><span class="card-category">كسكسي</span><h3>كسكسي بالدجاج</h3><div class="card-meta">⏱ 120 د · 👥 6</div></div>
+            <img class="recipe-card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Couscous-2.jpg/400px-Couscous-2.jpg" alt="كسكسي" loading="lazy">
+            <div class="recipe-card-body"><span class="card-category">كسكسي</span><h3>كسكسي دجاج</h3></div>
           </a>
           <a href="wasfat/lablabi-tounsi.html" class="recipe-card">
-            <img class="recipe-card-img" src="https://images.unsplash.com/photo-1512058567297-8c084a1a8932?w=400&q=80&auto=format&fit=crop" alt="لبلابي تونسي" width="300" height="200" loading="lazy">
-            <div class="recipe-card-body"><span class="card-category">أكل شارع</span><h3>لبلابي تونسي</h3><div class="card-meta">⏱ 20 د · 👥 4</div></div>
+            <img class="recipe-card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Chickpea_and_Pasta_Soup_%28Laabali%29.jpg/400px-Chickpea_and_Pasta_Soup_%28Laabali%29.jpg" alt="لبلابي" loading="lazy">
+            <div class="recipe-card-body"><span class="card-category">أكل شارع</span><h3>لبلابي</h3></div>
           </a>
           <a href="wasfat/makroud-tounsi.html" class="recipe-card">
-            <img class="recipe-card-img" src="https://images.unsplash.com/photo-1599599810769-bcde5a160d32?w=400&q=80&auto=format&fit=crop" alt="مقروض تونسي" width="300" height="200" loading="lazy">
-            <div class="recipe-card-body"><span class="card-category">حلويات</span><h3>مقروض بالتمر</h3><div class="card-meta">⏱ 70 د · 👥 25</div></div>
+            <img class="recipe-card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Makroudh.jpg/400px-Makroudh.jpg" alt="مقروض" loading="lazy">
+            <div class="recipe-card-body"><span class="card-category">حلويات</span><h3>مقروض</h3></div>
           </a>
           <a href="wasfat/brik-tounsi.html" class="recipe-card">
-            <img class="recipe-card-img" src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=400&q=80&auto=format&fit=crop" alt="بريك تونسي" width="300" height="200" loading="lazy">
-            <div class="recipe-card-body"><span class="card-category">أكل شارع</span><h3>بريك بالتونة</h3><div class="card-meta">⏱ 30 د · 👥 4</div></div>
+            <img class="recipe-card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Brik.jpg/400px-Brik.jpg" alt="بريك" loading="lazy">
+            <div class="recipe-card-body"><span class="card-category">أكل شارع</span><h3>بريك</h3></div>
           </a>
         </div>
-        <div class="text-center mt-2">
-          <a href="wasfat/" class="btn btn-outline">شوف كل الوصفات (10+) ←</a>
-        </div>
+        <div class="text-center mt-2"><a href="wasfat/index.html" class="btn btn-outline">كل الوصفات ←</a></div>
       </div>
     </section>
 
-    <div class="container">
-      <div class="ad-slot ad-incontent" id="monetag-mid-banner" data-ad-type="banner" data-size="728x90" role="complementary" aria-label="إعلان"></div>
-    </div>
+    <div class="container"><div class="ad-slot ad-incontent" data-ad-type="banner" data-size="728x90" data-fallback="mid"></div></div>
 
-    <section id="tasnifat" aria-labelledby="cats-title">
+    <section id="tasnifat">
       <div class="container">
-        <h2 class="section-title" id="cats-title">📂 <span>تصنيفات الوصفات</span></h2>
+        <h2 class="section-title">📂 <span>تصنيفات</span></h2>
         <div class="categories-grid">
-          <a href="wasfat/?cat=malha" class="category-card"><span class="cat-icon">🍲</span><h3>مالحة يومية</h3><p>شكشوكة، بامية</p></a>
-          <a href="wasfat/?cat=halawiyat" class="category-card"><span class="cat-icon">🍰</span><h3>حلويات تونسية</h3><p>يويو، مقروض</p></a>
-          <a href="wasfat/?cat=char" class="category-card"><span class="cat-icon">🌮</span><h3>أكل شارع</h3><p>لبلابي، فريكاسي، بريك</p></a>
-          <a href="wasfat/?cat=kosksi" class="category-card"><span class="cat-icon">🍚</span><h3>كسكسي</h3><p>دجاج، حوت</p></a>
-          <a href="wasfat/?cat=salatat" class="category-card"><span class="cat-icon">🥗</span><h3>سلطات ومقبلات</h3><p>سلطة مشوية</p></a>
-          <a href="wasfat/fricasse-tounsi.html" class="category-card"><span class="cat-icon">🌯</span><h3>فريكاسي</h3><p>ساندويتش تونسي</p></a>
-          <a href="wasfat/kosksi-hout.html" class="category-card"><span class="cat-icon">🐟</span><h3>كسكسي حوت</h3><p>وصفة الساحل</p></a>
-          <a href="wasfat/youyou-tounsi.html" class="category-card"><span class="cat-icon">🍩</span><h3>يويو</h3><p>حلوة العيد</p></a>
+          <a href="wasfat/index.html?cat=malha" class="category-card"><span class="cat-icon">🍲</span><h3>مالحة</h3></a>
+          <a href="wasfat/index.html?cat=halawiyat" class="category-card"><span class="cat-icon">🍰</span><h3>حلويات</h3></a>
+          <a href="wasfat/index.html?cat=char" class="category-card"><span class="cat-icon">🌮</span><h3>أكل شارع</h3></a>
+          <a href="wasfat/index.html?cat=kosksi" class="category-card"><span class="cat-icon">🍚</span><h3>كسكسي</h3></a>
         </div>
       </div>
     </section>
 
-    <section id="vidyohat" aria-labelledby="videos-title">
+    <section id="vidyohat">
       <div class="container">
-        <h2 class="section-title" id="videos-title">🎥 <span>فيديوهات</span></h2>
+        <h2 class="section-title">🎥 <span>فيديوهات</span></h2>
         <div class="videos-grid">
-          <article class="video-card">
-            <a href="wasfat/lablabi-tounsi.html" class="video-thumb">
-              <img src="https://images.unsplash.com/photo-1512058567297-8c084a1a8932?w=400&q=80&auto=format&fit=crop" alt="فيديو لبلابي" width="400" height="225" loading="lazy">
-              <span class="play-btn" aria-hidden="true">▶</span>
-            </a>
-            <div class="video-card-body"><h3>كيفاش تعمل لبلابي أصلي</h3><p style="font-size:0.85rem;color:var(--gray)">وصفة + فيديو</p></div>
-          </article>
-          <article class="video-card">
-            <a href="wasfat/kosksi-djaj.html" class="video-thumb">
-              <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&q=80&auto=format&fit=crop" alt="فيديو كسكسي" width="400" height="225" loading="lazy">
-              <span class="play-btn" aria-hidden="true">▶</span>
-            </a>
-            <div class="video-card-body"><h3>كسكسي بالدجاج — الطريقة الصحيحة</h3><p style="font-size:0.85rem;color:var(--gray)">وصفة + فيديو</p></div>
-          </article>
-          <article class="video-card">
-            <a href="wasfat/brik-tounsi.html" class="video-thumb">
-              <img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=400&q=80&auto=format&fit=crop" alt="فيديو بريك" width="400" height="225" loading="lazy">
-              <span class="play-btn" aria-hidden="true">▶</span>
-            </a>
-            <div class="video-card-body"><h3>بريك تونسي بالتونة</h3><p style="font-size:0.85rem;color:var(--gray)">وصفة + فيديو</p></div>
-          </article>
+          <article class="video-card"><a href="wasfat/lablabi-tounsi.html" class="video-thumb"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Chickpea_and_Pasta_Soup_%28Laabali%29.jpg/400px-Chickpea_and_Pasta_Soup_%28Laabali%29.jpg" alt="لبلابي" loading="lazy"><span class="play-btn">▶</span></a><div class="video-card-body"><h3>لبلابي أصلي</h3></div></article>
+          <article class="video-card"><a href="wasfat/kosksi-djaj.html" class="video-thumb"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Couscous-2.jpg/400px-Couscous-2.jpg" alt="كسكسي" loading="lazy"><span class="play-btn">▶</span></a><div class="video-card-body"><h3>كسكسي دجاج</h3></div></article>
+          <article class="video-card"><a href="wasfat/brik-tounsi.html" class="video-thumb"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Brik.jpg/400px-Brik.jpg" alt="بريك" loading="lazy"><span class="play-btn">▶</span></a><div class="video-card-body"><h3>بريك تونسي</h3></div></article>
         </div>
       </div>
     </section>
 
-    <section id="men-matbakhekum" aria-labelledby="ugc-title">
+    <section id="men-matbakhekum">
       <div class="container">
-        <h2 class="section-title" id="ugc-title">👩‍🍳 <span>من مطبخكم</span></h2>
-        <p class="text-center mb-1" style="color:var(--gray)">وصفات مرسلة من قرّابكم التوانسة</p>
-        <div class="ugc-grid">
-          <div class="ugc-card"><div class="ugc-avatar">👩</div><div class="ugc-info"><h4>فاطمة من صفاقس</h4><p>كسكسي بالغلال — وصفة جدّتها</p></div></div>
-          <div class="ugc-card"><div class="ugc-avatar">👨</div><div class="ugc-info"><h4>أنيس من تونس</h4><p>بريك بالبطاطا والتونة — كيف ما يحبوه العيال</p></div></div>
-          <div class="ugc-card"><div class="ugc-avatar">👩</div><div class="ugc-info"><h4>سامية من باريس</h4><p>مقروض بالتمر — ذكريات رمضان</p></div></div>
-        </div>
-        <div class="text-center mt-2"><a href="men-matbakhekum/" class="btn btn-gold">أرسل وصفتك ←</a></div>
+        <h2 class="section-title">👩‍🍳 <span>من مطبخكم</span></h2>
+        <div class="text-center mt-2"><a href="men-matbakhekum/index.html" class="btn btn-gold">أرسل وصفتك ←</a></div>
       </div>
     </section>
 
-    <section id="blog" aria-labelledby="blog-title">
+    <section id="blog">
       <div class="container">
-        <h2 class="section-title" id="blog-title">📖 <span>من المدونة</span></h2>
+        <h2 class="section-title">📖 <span>المدونة</span></h2>
         <div class="blog-list">
-          <a href="blog/" class="blog-item"><span class="blog-icon">📜</span><div><h4>تاريخ اللبلابي في تونس</h4><p>من سوق المرسى للعالم</p></div></a>
-          <a href="blog/" class="blog-item"><span class="blog-icon">🌾</span><div><h4>كيفاش تختار سميد الكسكسي</h4><p>نصائح من الخبّازين التوانسة</p></div></a>
-          <a href="blog/" class="blog-item"><span class="blog-icon">🌙</span><div><h4>ذكريات رمضان في المطبخ التونسي</h4><p>ريحة البريك والمقروض في الليل</p></div></a>
+          <a href="blog/index.html" class="blog-item"><span class="blog-icon">📜</span><div><h4>تاريخ اللبلابي</h4></div></a>
+          <a href="blog/index.html" class="blog-item"><span class="blog-icon">🌙</span><div><h4>ذكريات رمضان</h4></div></a>
         </div>
       </div>
     </section>
 
-    <section id="adawat" aria-labelledby="tools-title">
+    <section id="adawat">
       <div class="container">
-        <h2 class="section-title" id="tools-title">🛠️ <span>أدوات سريعة</span></h2>
+        <h2 class="section-title">🛠️ <span>أدوات</span></h2>
         <div class="tools-grid">
-          <a href="adawat/" class="tool-card"><span class="tool-icon">⚖️</span><span>محول وحدات</span></a>
-          <a href="adawat/" class="tool-card"><span class="tool-icon">🛒</span><span>قائمة تسوق</span></a>
-          <a href="adawat/" class="tool-card"><span class="tool-icon">💰</span><span>حاسبة تكلفة</span></a>
-          <a href="adawat/" class="tool-card"><span class="tool-icon">🌤️</span><span>طقس تونس</span></a>
+          <a href="adawat/index.html" class="tool-card"><span class="tool-icon">⚖️</span><span>محول وحدات</span></a>
+          <a href="adawat/index.html" class="tool-card"><span class="tool-icon">🛒</span><span>قائمة تسوق</span></a>
         </div>
       </div>
     </section>
@@ -260,56 +183,23 @@
 
   <footer class="site-footer">
     <div class="container">
-      <div class="ad-slot ad-footer" id="monetag-footer-banner" data-ad-type="banner" data-size="728x90" role="complementary" aria-label="إعلان"></div>
+      <div class="ad-slot ad-footer" data-ad-type="banner" data-size="728x90" data-fallback="footer"></div>
       <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="/" class="logo">
-            <div class="logo-icon" aria-hidden="true">🍲</div>
-            <div class="logo-text"><strong>مطبخنا التونسي</strong><small>Wasfat Tounsia</small></div>
-          </a>
-          <p>موقع وصفات تونسية بالدارجة — نخدموكم كل يوم بوصفات أصيلة من تونس لكل المغرب العربي والمهجر.</p>
-          <div class="social-links">
-            <a href="#" aria-label="فيسبوك">📘</a>
-            <a href="#" aria-label="تيك توك">🎵</a>
-            <a href="#" aria-label="انستغرام">📷</a>
-            <a href="#" aria-label="واتساب">💬</a>
-          </div>
-        </div>
-        <div class="footer-links">
-          <h4>روابط سريعة</h4>
-          <ul>
-            <li><a href="wasfat/">الوصفات</a></li>
-            <li><a href="wasfat/lablabi-tounsi.html">لبلابي</a></li>
-            <li><a href="wasfat/kosksi-djaj.html">كسكسي</a></li>
-            <li><a href="wasfat/brik-tounsi.html">بريك</a></li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <h4>المزيد</h4>
-          <ul>
-            <li><a href="men-matbakhekum/">من مطبخكم</a></li>
-            <li><a href="aanna/">عن الموقع</a></li>
-            <li><a href="ittasil-bina/">اتصل بنا</a></li>
-            <li><a href="privacy/">سياسة الخصوصية</a></li>
-          </ul>
-        </div>
+        <div class="footer-brand"><p>وصفات تونسية بالدارجة 🇹🇳</p></div>
+        <div class="footer-links"><h4>روابط</h4><ul>
+          <li><a href="wasfat/index.html">الوصفات</a></li>
+          <li><a href="blog/index.html">المدونة</a></li>
+          <li><a href="aanna/index.html">عنّا</a></li>
+          <li><a href="privacy/index.html">الخصوصية</a></li>
+        </ul></div>
       </div>
-      <div class="footer-bottom"><p>© 2026 مطبخنا التونسي — Wasfat Tounsia. كل الحقوق محفوظة. 🇹🇳</p></div>
+      <div class="footer-bottom"><p>© 2026 مطبخنا التونسي</p></div>
     </div>
   </footer>
 
-  <button class="back-to-top" aria-label="الرجوع للأعلى" id="back-to-top">↑</button>
-
+  <button class="back-to-top" id="back-to-top" aria-label="أعلى">↑</button>
+  <script src="js/paths.js"></script>
   <script src="js/recipes-data.js" defer></script>
   <script src="js/main.js" defer></script>
-  <script>
-    window.addEventListener('scroll', function () {
-      document.getElementById('back-to-top')?.classList.toggle('visible', window.scrollY > 400);
-    });
-    document.getElementById('back-to-top')?.addEventListener('click', function () {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  </script>
-  <script src="https://quge5.com/88/tag.min.js" data-zone="255314" async data-cfasync="false"></script>
 </body>
 </html>

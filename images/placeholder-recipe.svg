@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#FDF8F0"/>
+  <rect x="200" y="120" width="400" height="260" rx="20" fill="#CE1126" opacity="0.15"/>
+  <text x="400" y="260" text-anchor="middle" font-family="Arial,sans-serif" font-size="48">🍲</text>
+  <text x="400" y="320" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#8B7355">مطبخنا التونسي</text>
+</svg>

@@ -1,6 +1,6 @@
 [build]
   publish = "."
-  command = "node scripts/generate-recipes.mjs"
+  command = "node scripts/generate-recipes.mjs && node scripts/generate-static-pages.mjs"
 
 [build.environment]
   NODE_VERSION = "20"
@@ -42,3 +42,39 @@
   from = "/recipe/:slug"
   to = "/wasfat/:slug.html"
   status = 301
+
+[[redirects]]
+  from = "/blog"
+  to = "/blog/"
+  status = 301
+
+[[redirects]]
+  from = "/adawat"
+  to = "/adawat/"
+  status = 301
+
+[[redirects]]
+  from = "/men-matbakhekum"
+  to = "/men-matbakhekum/"
+  status = 301
+
+[[redirects]]
+  from = "/aanna"
+  to = "/aanna/"
+  status = 301
+
+[[redirects]]
+  from = "/ittasil-bina"
+  to = "/ittasil-bina/"
+  status = 301
+
+[[redirects]]
+  from = "/privacy"
+  to = "/privacy/"
+  status = 301
+
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+    Service-Worker-Allowed = "/"
