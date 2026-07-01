@@ -1,5 +1,9 @@
 [build]
   publish = "."
+  command = "node scripts/generate-recipes.mjs"
+
+[build.environment]
+  NODE_VERSION = "20"
 
 [[headers]]
   for = "/*"
@@ -7,6 +11,7 @@
     X-Frame-Options = "SAMEORIGIN"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
 [[headers]]
   for = "/css/*"
@@ -19,6 +24,21 @@
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  for = "/images/*"
+  for = "/data/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+[[redirects]]
+  from = "/wasfat"
+  to = "/wasfat/"
+  status = 301
+
+[[redirects]]
+  from = "/recipe/:slug"
+  to = "/wasfat/:slug.html"
+  status = 301

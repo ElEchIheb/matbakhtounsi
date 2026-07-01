@@ -6,6 +6,9 @@
 (function () {
   'use strict';
 
+  const THEME_KEY = 'mt_theme';
+  const basePath = document.querySelector('body[data-recipe-slug]') ? '../' : '';
+
   /* ── Mobile Navigation ── */
   function initMobileNav() {
     const toggle = document.querySelector('.nav-toggle');
@@ -29,15 +32,40 @@
     });
 
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && nav.classList.contains('open')) {
+      if (e.key === 'Escape') {
         nav.classList.remove('open');
-        toggle.classList.remove('active');
+        toggle?.classList.remove('active');
         document.body.style.overflow = '';
+        hideSearchResults();
       }
     });
   }
 
-  /* ── Smooth Scroll for anchor links ── */
+  /* ── Dark Mode ── */
+  function initTheme() {
+    const saved = localStorage.getItem(THEME_KEY);
+    if (saved === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+
+    document.querySelectorAll('.theme-toggle').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        if (isDark) {
+          document.documentElement.removeAttribute('data-theme');
+          localStorage.setItem(THEME_KEY, 'light');
+          btn.textContent = '🌙';
+        } else {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          localStorage.setItem(THEME_KEY, 'dark');
+          btn.textContent = '☀️';
+        }
+      });
+      if (document.documentElement.getAttribute('data-theme') === 'dark') {
+        btn.textContent = '☀️';
+      }
+    });
+  }
+
+  /* ── Smooth Scroll ── */
   function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
       anchor.addEventListener('click', function (e) {
@@ -47,40 +75,18 @@
         if (!target) return;
         e.preventDefault();
         const headerH = document.querySelector('.site-header')?.offsetHeight || 64;
-        const top = target.getBoundingClientRect().top + window.scrollY - headerH;
-        window.scrollTo({ top: top, behavior: 'smooth' });
+        window.scrollTo({
+          top: target.getBoundingClientRect().top + window.scrollY - headerH,
+          behavior: 'smooth'
+        });
       });
     });
   }
 
-  /* ── Lazy Loading images (native + fallback) ── */
-  function initLazyLoad() {
-    if ('loading' in HTMLImageElement.prototype) return;
-
-    const images = document.querySelectorAll('img[loading="lazy"]');
-    if (!images.length) return;
-
-    const observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        const img = entry.target;
-        if (img.dataset.src) {
-          img.src = img.dataset.src;
-          img.removeAttribute('data-src');
-        }
-        observer.unobserve(img);
-      });
-    }, { rootMargin: '200px' });
-
-    images.forEach(function (img) { observer.observe(img); });
-  }
-
-  /* ── Print Recipe ── */
+  /* ── Print ── */
   function initPrintButton() {
     document.querySelectorAll('[data-print]').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        window.print();
-      });
+      btn.addEventListener('click', function () { window.print(); });
     });
   }
 
@@ -102,47 +108,25 @@
             break;
           case 'tiktok':
             if (navigator.clipboard) {
-              navigator.clipboard.writeText(decodeURIComponent(url));
+              navigator.clipboard.writeText(window.location.href);
               showToast('الرابط تنسخ! الصقوه في تيك توك 📋');
             }
             return;
         }
-
-        if (shareUrl) {
-          window.open(shareUrl, '_blank', 'width=600,height=400,noopener');
-        }
+        if (shareUrl) window.open(shareUrl, '_blank', 'width=600,height=400,noopener');
       });
     });
   }
 
-  /* ── Simple Toast Notification ── */
   function showToast(message) {
     const existing = document.querySelector('.toast');
     if (existing) existing.remove();
-
     const toast = document.createElement('div');
     toast.className = 'toast';
     toast.textContent = message;
-    toast.style.cssText = [
-      'position:fixed',
-      'bottom:2rem',
-      'left:50%',
-      'transform:translateX(-50%)',
-      'background:#006233',
-      'color:#fff',
-      'padding:0.75rem 1.5rem',
-      'border-radius:50px',
-      'font-family:Cairo,sans-serif',
-      'font-size:0.9rem',
-      'z-index:9999',
-      'box-shadow:0 4px 20px rgba(0,0,0,0.2)',
-      'animation:fadeInUp 0.3s ease'
-    ].join(';');
-
     document.body.appendChild(toast);
     setTimeout(function () {
-      toast.style.opacity = '0';
-      toast.style.transition = 'opacity 0.3s';
+      toast.classList.add('toast-hide');
       setTimeout(function () { toast.remove(); }, 300);
     }, 3000);
   }
@@ -152,134 +136,166 @@
     const days = ['الأحد', 'الإثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'];
     const today = days[new Date().getDay()];
     document.querySelectorAll('.day-card').forEach(function (card) {
-      if (card.dataset.day === today) {
-        card.classList.add('today');
-      }
+      if (card.dataset.day === today) card.classList.add('today');
     });
   }
 
-  /* ── Simple Search (client-side filter on wasfat page) ── */
+  /* ── Search with Autocomplete ── */
   function initSearch() {
-    const searchInput = document.querySelector('#site-search');
-    if (!searchInput) return;
+    const input = document.querySelector('#site-search');
+    const results = document.querySelector('#search-results');
+    if (!input || !window.RECIPES) return;
 
-    searchInput.addEventListener('keydown', function (e) {
-      if (e.key !== 'Enter') return;
-      e.preventDefault();
-      const query = this.value.trim();
-      if (query) {
-        window.location.href = '/wasfat/?q=' + encodeURIComponent(query);
-      }
-    });
-  }
+    const wasfatBase = basePath + 'wasfat/';
 
-  /* ── Comment Form (demo — no backend) ── */
-  function initCommentForm() {
-    const form = document.querySelector('.comment-form');
-    if (!form) return;
-
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const textarea = form.querySelector('textarea');
-      const text = textarea.value.trim();
-      if (!text) return;
-
-      const list = document.querySelector('.comments-list');
-      if (!list) return;
-
-      const item = document.createElement('div');
-      item.className = 'comment-item';
-      item.innerHTML =
-        '<div class="comment-author">زائر</div>' +
-        '<div class="comment-date">الآن</div>' +
-        '<div class="comment-text">' + escapeHtml(text) + '</div>';
-
-      list.prepend(item);
-      textarea.value = '';
-      showToast('تعليقك تسجّل! شكراً 🇹🇳');
-    });
-  }
-
-  function escapeHtml(str) {
-    const div = document.createElement('div');
-    div.textContent = str;
-    return div.innerHTML;
-  }
-
-  /* ── Monetag Popunder Simulation ── */
-  function initMonetagPopunder() {
-    /*
-     * MONETAG POPUNDER — استبدل هذا القسم بكود Monetag الحقيقي:
-     *
-     * <script src="https://...monetag.../popunder.js" data-zone="YOUR_ZONE_ID"></script>
-     *
-     * أو الصق الكود في index.html و lablabi-tounsi.html داخل:
-     * <!-- MONETAG POPUNDER CODE HERE -->
-     */
-
-    const POPUNDER_DELAY = 45000;
-    const POPUNDER_ENABLED = true;
-    const STORAGE_KEY = 'mt_popunder_shown';
-
-    if (!POPUNDER_ENABLED) return;
-    if (sessionStorage.getItem(STORAGE_KEY)) return;
-
-    let triggered = false;
-
-    function triggerPopunder(source) {
-      if (triggered) return;
-      triggered = true;
-      sessionStorage.setItem(STORAGE_KEY, '1');
-
-      const slot = document.getElementById('monetag-popunder-slot');
-      if (slot) {
-        slot.innerHTML =
-          '<div style="padding:1rem;text-align:center;font-family:Cairo,sans-serif">' +
-          '<strong>Monetag Popunder</strong><br>' +
-          '<small>مصدر: ' + source + ' — استبدل بكود Monetag الحقيقي</small>' +
-          '</div>';
-      }
-
-      console.info('[Monetag] Popunder triggered via:', source);
+    function filterRecipes(q) {
+      q = q.trim().toLowerCase();
+      if (!q) return [];
+      return window.RECIPES.filter(function (r) {
+        return r.title.toLowerCase().includes(q) ||
+          r.categoryLabel.toLowerCase().includes(q) ||
+          r.slug.includes(q);
+      }).slice(0, 6);
     }
 
-    setTimeout(function () {
-      triggerPopunder('timer-45s');
-    }, POPUNDER_DELAY);
+    function renderResults(items) {
+      if (!items.length) {
+        results.innerHTML = '<div class="search-empty">ما لقيناش وصفة — جرّب كلمة أخرى</div>';
+        results.hidden = false;
+        return;
+      }
+      results.innerHTML = items.map(function (r) {
+        return '<a class="search-result-item" href="' + wasfatBase + r.slug + '.html">' +
+          '<img src="' + r.image + '" alt="" width="40" height="40" loading="lazy">' +
+          '<span><strong>' + r.emoji + ' ' + r.title + '</strong><small>' + r.categoryLabel + ' · ' + r.totalTime + ' د</small></span></a>';
+      }).join('');
+      results.hidden = false;
+    }
 
-    document.addEventListener('mouseleave', function (e) {
-      if (e.clientY <= 0) {
-        triggerPopunder('exit-intent');
+    function hideSearchResults() {
+      if (results) results.hidden = true;
+    }
+
+    input.addEventListener('input', function () {
+      const items = filterRecipes(this.value);
+      if (this.value.trim().length < 2) { hideSearchResults(); return; }
+      renderResults(items);
+    });
+
+    input.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        const items = filterRecipes(this.value);
+        if (items.length) window.location.href = wasfatBase + items[0].slug + '.html';
+        else if (this.value.trim()) window.location.href = wasfatBase + '?q=' + encodeURIComponent(this.value.trim());
+      }
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('.search-box')) hideSearchResults();
+    });
+  }
+
+  /* ── Wasfat page: filter & search from URL ── */
+  function initWasfatPage() {
+    const grid = document.querySelector('#recipes-grid');
+    if (!grid || !window.RECIPES) return;
+
+    const params = new URLSearchParams(window.location.search);
+    const cat = params.get('cat');
+    const q = params.get('q');
+
+    function render(cards) {
+      if (!cards.length) {
+        grid.innerHTML = '<p class="no-results">ما لقيناش وصفات — جرّب تصنيف آخر</p>';
+        return;
+      }
+      grid.innerHTML = cards.map(function (r) {
+        return '<a href="' + r.slug + '.html" class="recipe-card" data-category="' + r.category + '">' +
+          '<img class="recipe-card-img" src="' + r.image + '" alt="' + r.imageAlt + '" width="300" height="200" loading="lazy">' +
+          '<div class="recipe-card-body">' +
+          '<span class="card-category">' + r.categoryLabel + '</span>' +
+          '<h3>' + r.emoji + ' ' + r.title + '</h3>' +
+          '<div class="card-meta">⏱ ' + r.totalTime + ' د · 👥 ' + r.yield + ' · ⭐ ' + r.difficulty + '</div>' +
+          '</div></a>';
+      }).join('');
+    }
+
+    let filtered = window.RECIPES.slice();
+    if (cat) filtered = filtered.filter(function (r) { return r.category === cat; });
+    if (q) {
+      const ql = q.toLowerCase();
+      filtered = filtered.filter(function (r) {
+        return r.title.toLowerCase().includes(ql) || r.categoryLabel.toLowerCase().includes(ql);
+      });
+    }
+    render(filtered);
+
+    document.querySelectorAll('.filter-chip').forEach(function (chip) {
+      chip.addEventListener('click', function (e) {
+        e.preventDefault();
+        const c = this.dataset.cat;
+        document.querySelectorAll('.filter-chip').forEach(function (c) { c.classList.remove('active'); });
+        this.classList.add('active');
+        const list = c === 'all' ? window.RECIPES : window.RECIPES.filter(function (r) { return r.category === c; });
+        render(list);
+      });
+    });
+
+    if (q && document.querySelector('#site-search')) {
+      document.querySelector('#site-search').value = q;
+    }
+  }
+
+  /* ── Comment Form ── */
+  function initCommentForm() {
+    document.querySelectorAll('.comment-form').forEach(function (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const textarea = form.querySelector('textarea');
+        const text = textarea.value.trim();
+        if (!text) return;
+        const list = form.parentElement.querySelector('.comments-list');
+        if (!list) return;
+        const item = document.createElement('div');
+        item.className = 'comment-item';
+        item.innerHTML = '<div class="comment-author">زائر</div><div class="comment-date">الآن</div><div class="comment-text"></div>';
+        item.querySelector('.comment-text').textContent = text;
+        list.prepend(item);
+        textarea.value = '';
+        showToast('تعليقك تسجّل! شكراً 🇹🇳');
+      });
+    });
+  }
+
+  /* ── Monetag Banner Placeholders ── */
+  function initMonetagBanners() {
+    document.querySelectorAll('.ad-slot[data-ad-type="banner"]').forEach(function (slot) {
+      if (slot.children.length > 0 && !slot.querySelector('span')) return;
+      const size = slot.dataset.size || 'auto';
+      if (!slot.textContent.trim()) {
+        slot.innerHTML = '<span>Monetag Banner ' + size + '</span>';
       }
     });
   }
 
-  /* ── Monetag Banner Placeholder Loader ── */
-  function initMonetagBanners() {
-    /*
-     * لكل banner slot، الصق كود Monetag داخل العنصر.
-     * مثال:
-     * document.getElementById('monetag-header-banner').innerHTML = 'YOUR_BANNER_CODE';
-     */
-    document.querySelectorAll('.ad-slot[data-ad-type="banner"]').forEach(function (slot) {
-      if (slot.children.length > 0) return;
-      const size = slot.dataset.size || 'auto';
-      slot.innerHTML =
-        '<span>Monetag Banner ' + size + '<br>الصق كود الإعلان هنا</span>';
-    });
-  }
-
-  /* ── Init ── */
-  document.addEventListener('DOMContentLoaded', function () {
+  /* ── Load recipes-data then init search ── */
+  function initWhenReady() {
     initMobileNav();
+    initTheme();
     initSmoothScroll();
-    initLazyLoad();
     initPrintButton();
     initShareButtons();
     highlightToday();
     initSearch();
+    initWasfatPage();
     initCommentForm();
     initMonetagBanners();
-    initMonetagPopunder();
-  });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initWhenReady);
+  } else {
+    initWhenReady();
+  }
 })();

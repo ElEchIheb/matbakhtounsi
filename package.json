@@ -1,0 +1,10 @@
+{
+  "name": "matbakhtounsi",
+  "version": "1.0.0",
+  "description": "مطبخنا التونسي — Wasfat Tounsia",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/generate-recipes.mjs",
+    "dev": "npx serve ."
+  }
+}
